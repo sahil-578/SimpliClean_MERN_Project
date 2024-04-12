@@ -25,5 +25,6 @@ router.post("/upload", upload.single('product'), (req, res) => {
 router.post('/addproduct', productController.addProduct);
 router.post('/deleteproduct', productController.deleteProduct);
 router.get('/allproducts', productController.getAllProducts);
-
+router.get('/newcollections', productController.newcollections); 
+router.get('/popularcollections', productController.popularcollections);
 module.exports = router;
