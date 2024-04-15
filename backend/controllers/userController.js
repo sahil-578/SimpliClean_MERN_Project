@@ -68,3 +68,45 @@ exports.login = async (req, res) => {
         res.status(500).json({ success: false, error: "Internal Server Error" });
     }
 };
+
+
+exports.addtocart = async (req, res) => {
+    console.log("Added", req.body.itemId);
+    try {
+        let userData = await User.findOne({ _id: req.user.id });
+        userData.cartData[req.body.itemId] += 1;
+        await User.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+        res.send('Added');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+};
+
+
+exports.deletefromcart = async  (req, res) => {
+    console.log("Removed", req.body.itemId);
+    try {
+        let userData = await User.findOne({ _id: req.user.id });
+        if (userData.cartData[req.body.itemId] > 0)
+            userData.cartData[req.body.itemId] -= 1;
+        await User.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+        res.send('Removed');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+};
+
+
+exports.getcart = async (req, res) => {
+    console.log("Getting Cart");
+    try{
+        let userData = await  User.findOne({ _id: req.user.id });
+        res.json(userData.cartData);
+    }
+    catch(error){
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+};

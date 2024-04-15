@@ -29,10 +29,10 @@ app.use('/images', express.static(path.join(__dirname, 'upload/images')));
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 
-app.post('/addtocart', fetchUser, async (req, res) => {
-    console.log('fetchUser Called');
-    console.log(req.body, req.user);
-});
+// app.post('/addtocart', fetchUser, async (req, res) => {
+//     console.log('fetchUser Called');
+//     console.log(req.body, req.user);
+// });
 
 // Start server
 app.listen(port, (error) => {
