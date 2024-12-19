@@ -21,13 +21,15 @@ let all_product = [
     {
         id:1,
         name:"SimpliClean - 333, Shilong Grass Broom, Binded With Wire",
-        image:p1_img,
+        category: 'broom',
+        image: p1_img,
         new_price: 50.00,
         old_price: 80.50,
     },
     {
         id:2,
         name:"SimpliClean - DBL, Shilong Grass Broom, Locked With Seal Strip",
+        category: 'broom',
         image:p2_img,
         new_price: 200.00,
         old_price: 299.00,
@@ -35,6 +37,7 @@ let all_product = [
     {
         id:3,
         name: "SimpliClean - Evergreen, Shilong Grass Broom, Traditional Look With Strong Plastic Handle",
+        category: 'broom',
         image:p3_img,
         new_price: 230.00,
         old_price: 300.00,
@@ -42,6 +45,7 @@ let all_product = [
     {
         id:4,
         name: "SimpliClean - STL, Shilong Grass, Heavy Weight 1.5'' Chrome Plated MS Pipe Handle",
+        category: 'broom',
         image:p4_img,
         new_price: 240.00,
         old_price: 349.00, 
@@ -49,6 +53,7 @@ let all_product = [
     {
         id: 5,
         name: "SimpliClean Silchar - R22, Made with Mizoram Grass, Binded With Wire, Control Grip Accupressure Handle",
+        category: 'broom',
         image: p5_img,
         new_price: 260.0,
         old_price: 410.5,
@@ -56,6 +61,7 @@ let all_product = [
     {
         id: 6,
         name: "SimpliClean Swirly's 5D, Shilong Grass, 1.25'' Chrome Plated MS Pipe Handle, Weight 450 Gms",
+        category: 'broom',
         image: p6_img,
         new_price: 169.0,
         old_price: 250.0,
@@ -63,6 +69,7 @@ let all_product = [
     {
         id: 7,
         name: "SimpliClean RB-44, Non- Dust Broom, Long Handle, Washable and Effortless Cleaning, Weight 280 Gms",
+        category: 'broom',
         image: p7_img,
         new_price: 189.0,
         old_price: 249.0,
@@ -70,6 +77,7 @@ let all_product = [
     {
         id: 8,
         name: "SimpliClean Kitchen Wipers, Blade Size 10 Inch",
+        category: 'wiper',
         image: p8_img,
         new_price: 80.0,
         old_price: 100.0,
@@ -77,6 +85,7 @@ let all_product = [
     {
         id: 9,
         name: "SimpliClean Swirly's, Shillong Grass, Long Semi Laminated Plastic Handles, Weight 450 Gms",
+        category: 'broom',
         image: p9_img,
         new_price: 135.0,
         old_price: 150.0,
@@ -84,6 +93,7 @@ let all_product = [
     {
         id: 10,
         name: "SimpliClean R-33, Shillong Grass, Accupressure Handle, Weight 425 Gms",
+        category: 'broom',
         image: p10_img,
         new_price: 200.0,
         old_price: 249.0,
@@ -91,6 +101,7 @@ let all_product = [
     {
         id: 11,
         name: "SimpliClean Ratan Ghala, Shillong Grass, Extra Long Handle, Premium Look, Weight 450 Gms",
+        category: 'broom',
         image: p11_img,
         new_price: 230.0,
         old_price: 250.0,
@@ -98,6 +109,7 @@ let all_product = [
     {
         id: 12,
         name: "SimpliClean Gold, Shillong Brass, Printed Tin Pipe Handle, Weight 450 Gms",
+        category: 'broom',
         image: p12_img,
         new_price: 180.0,
         old_price: 200.0,
@@ -105,6 +117,7 @@ let all_product = [
     {
         id: 13,
         name: "SimpliClean COCO - SPL, Indian Coco Sticks, Weight 400 Gms",
+        category: 'broom',
         image: p13_img,
         new_price: 60.0,
         old_price: 80.0,
@@ -112,6 +125,7 @@ let all_product = [
     {
         id: 14,
         name: "SimpliClean Chudi Coco, Indonesia Sticks, Super Long Sticks, Long Weight Handle, Weight 400 Gms",
+        category: 'broom',
         image: p14_img,
         new_price: 80.0,
         old_price: 150.0,
@@ -119,20 +133,15 @@ let all_product = [
     {
         id: 15,
         name: "SimpliClean Slim Wipers, 16'' Stainless Steel",
+        category: 'wiper',
         image: p15_img,
         new_price: 299.0,
         old_price: 349.0, 
     },
     {
-        id: 8,
-        name: "SimpliClean Kitchen Wipers, Blade Size 10 Inch",
-        image: p8_img,
-        new_price: 80.0,
-        old_price: 100.0,
-    },
-    {
         id:16,
         name: "SimpliClean Stainless Steel Scrubber - 10",
+        category: 'scrubber',
         image: p16_img, 
         new_price: 15.0,
         old_price: 19.0,
@@ -140,6 +149,7 @@ let all_product = [
     {
         id: 17,
         name: "SimpliClean Stainless Steel Scrubber - 12 ",
+        category: 'scrubber',
         image: p17_img, 
         new_price: 20.0,
         old_price: 25.0,
