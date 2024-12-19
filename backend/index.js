@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 const port = 4000;
@@ -19,8 +20,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/simpliclean_db", { useNewUrlParser: 
 // Set port
 app.set('port', port);
 
+app.use('/images', express.static('upload/images'));
+
 // Routes
-app.use('/', productRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
 
 // Start server
 app.listen(port, (error) => {

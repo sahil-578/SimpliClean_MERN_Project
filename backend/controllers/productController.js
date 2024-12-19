@@ -10,6 +10,7 @@ exports.addProduct = async (req, res) => {
         const product = new Product({
             id: id,
             name: req.body.name,
+            image : req.body.image,
             category: req.body.category,
             new_price: req.body.new_price,
             old_price: req.body.old_price,
@@ -45,7 +46,7 @@ exports.getAllProducts = async (req, res) => {
     try {
         let products = await Product.find({});
         console.log("All Products fetched");
-        res.json(products);
+        res.send(products);
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'Internal server error' });
