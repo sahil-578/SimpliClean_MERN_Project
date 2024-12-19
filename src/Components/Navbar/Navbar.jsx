@@ -24,7 +24,7 @@ function Navbar() {
             <img src={logo} alt="" />
         </div>
 
-        <img src={nav_dropdown} onClick={dropdown_toggle} alt="" />
+        <img className='nav-dropdown' src={nav_dropdown} onClick={dropdown_toggle} alt="" />
 
         <ul className='nav-menu' ref={menuRef}>
             <li onClick={() => {setMenu('shop')}}><Link style={{textDecoration : 'none', color : '#626262'}} to='/'>Shop </Link> {menu === 'shop' ? <hr /> : <></>}</li>
