@@ -52,3 +52,31 @@ exports.getAllProducts = async (req, res) => {
         res.status(500).json({ success: false, message: 'Internal server error' });
     }
 };
+
+
+exports.newcollections = async (req, res) => {
+    try{
+        let products = await Product.find({});
+        let newcollection = products.slice(1).slice(-8);
+        console.log("New Collection Fetched");
+        res.send(newcollection);
+    }
+    catch(error){
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+};
+
+
+exports.popularcollections = async (req, res) => {
+    try{
+        let products = await Product.find({category: "broom"});
+        let popularcollection = products.slice(0,4);
+        console.log('Popular Collection Fetched');
+        res.send(popularcollection);
+    }
+    catch(error){
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+};
